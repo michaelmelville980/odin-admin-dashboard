@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: system-ui;
 }
 
 img {
@@ -50,7 +51,8 @@ header .row1 form {
 }
 
 header .row1 form button,
-header .row1 .rightSection button
+header .row1 .rightSection button,
+nav button
 {
     background: none;
     border: none;
@@ -126,23 +128,58 @@ header .row2 button {
     font-size: 0.9rem;
 }
 
-
-
-
-
-
-
-
-
-
-
 nav {
-    /* Grid */
-    grid-area: 1 / 1 / -1 / 2;
-
-    /* Style */
+    grid-row:    1 / -1;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 5fr 5fr;
+    gap: 2rem;
+    background: #1A92D3;
     border: 2px solid black;
+    color: white;
+
 }
+
+nav .block1 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+nav .block2 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+nav .block3 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+nav img {
+    filter: invert(1);
+    height: 65%;
+}
+
+nav h2 {
+    font-size: 1.5rem;
+}
+
+nav h3 {
+    font-size: 1rem;
+}
+
+
+
+
+
 
 main {
 
