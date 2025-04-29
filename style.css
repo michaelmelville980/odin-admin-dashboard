@@ -10,18 +10,55 @@ body {
     height: 100vh;
     overflow: hidden;
 
-    /* Grid */
+    /* New Grid */
     display: grid;
     grid-template: 1fr 3.5fr / 1fr 4fr;
 }
 
+
+
+
+
+
+
+
 header {
-    /* Grid */
+    /* Body Grid Item */
     grid-column: 2 / -1;
+
+    /* New Grid */
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 
     /* Style */
     border: 2px solid black;
 }
+
+header > .row1 {
+    /* Header Grid Item */
+    grid-row: 1 / 2;
+
+    /* New Grid */
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+header .row1 .rightSection {
+     /* New Grid */
+     display: grid;
+     grid-template-columns: repeat(2, 1fr) 2fr;
+     gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 nav {
     /* Grid */
