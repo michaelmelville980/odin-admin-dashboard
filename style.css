@@ -2,31 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 body {
     /* Sizing */
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
 
-    /* New Grid */
+    /* New Grid (Header, Navigation, Main) */
     display: grid;
-    grid-template: 1fr 3.5fr / 1fr 4fr;
+    grid-template-rows: 1fr 3.5fr;
+    grid-template-columns: 1fr 4fr;
 }
-
-
-
-
-
-
-
 
 header {
     /* Body Grid Item */
     grid-column: 2 / -1;
 
-    /* New Grid */
+    /* New Grid (Header Row 1, Header Row 2) */
     display: grid;
     grid-template-rows: repeat(2, 1fr);
 
@@ -35,19 +35,30 @@ header {
 }
 
 header > .row1 {
-    /* Header Grid Item */
-    grid-row: 1 / 2;
-
-    /* New Grid */
+    /* New Grid (Search Form, Profile Icons) */
     display: grid;
     grid-template-columns: 2.5fr 1fr;
 }
 
+header .row1 form {
+    /* Sizing */
+    overflow: hidden;
+
+    /* New Grid (Search Button, Search Input) */
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+}
+
+
 header .row1 .rightSection {
-     /* New Grid */
-     display: grid;
-     grid-template-columns: repeat(2, 1fr) 2fr;
-     gap: 20px;
+    /* New Grid (Alert Icon, Profile Picture, Profile Name) */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr;
+}
+
+header .row1 .rightSection h1 {
+    white-space: nowrap;
+    font-size: 1.2rem; 
 }
 
 
